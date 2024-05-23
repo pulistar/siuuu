@@ -43,4 +43,7 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_FLOWER_0AF058D0F }}
-          action: "close"
+          action: "upload"
+          app_location: "/"
+          api_location: "api"  # Si tienes una API, sino omite esta línea
+          output_location: "build"  # El directorio donde se encuentra tu build
